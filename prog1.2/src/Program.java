@@ -15,9 +15,14 @@ import java.lang.Math;
             this.P = 0;
         }
 
+
         figure( int r) {
+            if(r==0) {
+                System.out.printf("no such figure");
+            }
             this.R = r;
         }
+
         public void getShape() {
             System.out.printf("angles: %s \n",this.angles);
             System.out.printf("R: %s \n",this.R);
@@ -50,6 +55,10 @@ public static class circle extends figure{
 
          square(int r,int A) {
              super(r);
+             if(A==0){
+                 System.out.printf("no such figure");
+
+             }
              this.angles=A;
          }
 
@@ -70,6 +79,9 @@ public static class circle extends figure{
 
          triangle(int r,int A) {
              super(r);
+             if(A==0) {
+                 System.out.printf("no such figure");
+             }
              this.angles=A;
          }
 

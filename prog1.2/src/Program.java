@@ -16,6 +16,7 @@ import java.lang.Math;
         }
 
         figure( int r) {
+         if(r==0){ throw new RuntimeException("There is no figure with such parameters.");};
             this.R = r;
         }
         public void getShape() {
@@ -50,6 +51,7 @@ public static class circle extends figure{
 
          square(int r,int A) {
              super(r);
+          if(A!=4){ throw new RuntimeException("There is no figure with such parameters.");};
              this.angles=A;
          }
 
@@ -70,6 +72,7 @@ public static class circle extends figure{
 
          triangle(int r,int A) {
              super(r);
+          if(A!=3){ throw new RuntimeException("There is no figure with such parameters.");};
              this.angles=A;
          }
 
